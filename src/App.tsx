@@ -50,9 +50,9 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary py-3 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-2" translate="no">
           <img src={LOGO_URL} alt="Óticas Malibu" className="h-10 w-10 rounded-full object-cover border-2 border-white/20 shadow-sm" referrerPolicy="no-referrer" />
-          <span className={`text-xl font-bold serif tracking-wide text-white`}>Óticas Malibu</span>
+          <span className="text-xl font-bold serif tracking-wide text-white">Óticas Malibu</span>
         </a>
 
         {/* Desktop Menu */}
@@ -61,6 +61,7 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href} 
+              translate="no"
               className="text-white/90 hover:text-accent transition-colors font-medium text-sm uppercase tracking-widest"
             >
               {link.name}
@@ -96,6 +97,7 @@ const Navbar = () => {
               <a 
                 key={link.name} 
                 href={link.href} 
+                translate="no"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-white text-lg font-medium py-2 border-b border-white/5"
               >
@@ -421,7 +423,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
           <div className="space-y-8">
-            <a href="#home" className="flex items-center gap-3">
+            <a href="#home" className="flex items-center gap-3" translate="no">
               <img src={LOGO_URL} alt="Óticas Malibu" className="h-12 w-12 rounded-full object-cover" referrerPolicy="no-referrer" />
               <span className="text-2xl font-bold serif tracking-wide">Óticas Malibu</span>
             </a>
@@ -435,7 +437,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {['Início', 'Sobre Nós', 'Serviços', 'Contato'].map(item => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 hover:text-accent transition-colors">{item}</a>
+                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} translate="no" className="text-white/60 hover:text-accent transition-colors">{item}</a>
                 </li>
               ))}
             </ul>
