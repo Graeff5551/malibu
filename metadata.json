@@ -1,0 +1,5 @@
+{
+  "name": "Óticas Malibu",
+  "description": "A Tua Ótica da Praia em Tramandaí. Estilo, qualidade e bem-estar visual com mais de 10 anos de experiência.",
+  "requestFramePermissions": ["geolocation"]
+}
